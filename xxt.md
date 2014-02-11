@@ -1,10 +1,10 @@
-拯救地球
+xxt
 ==============
 
 版本：0.1  
 作者：[文绍斌](mailto:ultraman_wen@sina.com)
 
-本文档用于描述“拯救地球”的客户端接口
+本文档用于描述“xxt”的客户端接口
 ******************************
 索引
 ----
@@ -24,8 +24,8 @@
 	* 错误标记 -- error
 	* 信息 -- msg
 #### 样例
-{
-  error: 0,
-  msg: "access successfully",
-}
+    {
+      error: 0,
+      msg: "access successfully",
+    }
 [↑返回顶部](#拯救地球)
