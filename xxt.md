@@ -39,12 +39,16 @@ xxt
 	* 错误标记 -- error
 	* 信息 -- msg
         * 标识 -- mauth
+        * 昵称 -- nick
+        * 学位 -- degree
 #### 样例
     {
-        error: 0,
-        msg: "login success",
-        data: {
-            mauth: "69206c6971528ae2e0c32ddeb21653df"
-        }
+	error: 0,
+	msg: "login success",
+	data: {
+	    mauth: "69206c6971528ae2e0c32ddeb21653df",
+	    nick: "一",
+	    degree: "学士"
+	}
     }
 [↑返回顶部](#xxt)
