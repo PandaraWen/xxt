@@ -9,14 +9,14 @@ xxt
 索引
 ----
 * 上行接口
-	*	[注册接口](#注册接口)
+  * [注册接口](#注册接口)
   * [登陆接口](#登陆接口)
 * 下行接口
   * [好友列表接口](#好友列表接口)
 
 接口说明
 --------
-* 上行接口
+<h1>上行接口</h1>
 
 <h2>注册接口</h2>
 域名:http://xxtforios.duapp.com/?op=regist&name=one&passwd=1
@@ -76,7 +76,7 @@ xxt
     }
 [↑返回顶部](#xxt)
 
-* 下行接口
+<h1>下行接口</h1>
 
 <h2>好友列表接口</h2>
 域名:http://xxtforios.duapp.com/?op=friendlist&mauth=69206c6971528ae2e0c32ddeb21653df&name=one
@@ -87,9 +87,9 @@ xxt
   * 错误标记 -- error
   * 信息 -- msg
   * 数据 -- data，数组
-        * 昵称 -- nick
-        * 学位 -- degree
-        * 用户名 -- name
+    * 昵称 -- nick
+    * 学位 -- degree
+    * 用户名 -- name
 #### 样例
     {
         "error": 0,
