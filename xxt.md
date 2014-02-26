@@ -10,10 +10,12 @@ xxt
 ----
 * 上行接口
 	*	[注册接口](#注册接口)
+  * [登陆接口](#登陆接口)
 * 下行接口
-
+  * [好友列表接口](#好友列表接口)
 接口说明
 --------
+* 上行接口
 
 <h2>注册接口</h2>
 域名:http://xxtforios.duapp.com/?op=regist&name=one&passwd=1
@@ -38,9 +40,11 @@ xxt
 #### 返回字段
 	* 错误标记 -- error
 	* 信息 -- msg
+  * 数据 -- data，字典
         * 标识 -- mauth
         * 昵称 -- nick
         * 学位 -- degree
+        * 用户名 -- name
 #### 样例
     { 
       error: 0,
@@ -48,7 +52,47 @@ xxt
       data: {
         mauth: "69206c6971528ae2e0c32ddeb21653df",
         nick: "一",
-        degree: "学士"
+        degree: "学士",
+        name: "one"
       }
     }
 [↑返回顶部](#xxt)
+
+* 下行接口
+
+<h2>好友列表接口</h2>
+域名:http://xxtforios.duapp.com/?op=friendlist&mauth=69206c6971528ae2e0c32ddeb21653df&name=one
+#### 请求参数
+  * 姓名 -- name
+  * 标识 -- mauth, name 与 mauth对应
+#### 返回字段
+  * 错误标记 -- error
+  * 信息 -- msg
+  * 数据 -- data，数组
+        * 昵称 -- nick
+        * 学位 -- degree
+        * 用户名 -- name
+#### 样例
+    {
+        "error": 0,
+        "msg": "access successfully",
+        "data": [
+            {
+                "name": "three",
+                "degree": "学士",
+                "nick": "三"
+            },
+            {
+                "name": "pandara",
+                "degree": "博士",
+                "nick": "烧饼"
+            }
+        ]
+    }
+[↑返回顶部](#xxt)
+
+
+
+
+
+
