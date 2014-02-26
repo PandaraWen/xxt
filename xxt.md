@@ -62,13 +62,13 @@ xxt
 <h2>发表动态接口</h2>
 域名:http://xxtforios.duapp.com/?op=postfeed&mauth=69206c6971528ae2e0c32ddeb21653df&name=one&content=百度已经完全落后了么&option=1
 #### 请求参数
-  * 姓名 -- name
-  * 标识 -- mauth
-  * 动态内容 -- content
-  * 可见性设置 -- option，0:全局，1:盆友，2:自己，不设置默认为0
+	* 姓名 -- name
+	* 标识 -- mauth
+	* 动态内容 -- content
+	* 可见性设置 -- option，0:全局，1:盆友，2:自己，不设置默认为0
 #### 返回字段
-  * 错误标记 -- error
-  * 信息 -- msg
+  	* 错误标记 -- error
+  	* 信息 -- msg
 #### 样例
     {
         "error": 0,
@@ -81,15 +81,15 @@ xxt
 <h2>好友列表接口</h2>
 域名:http://xxtforios.duapp.com/?op=friendlist&mauth=69206c6971528ae2e0c32ddeb21653df&name=one
 #### 请求参数
-  * 姓名 -- name
-  * 标识 -- mauth, name 与 mauth对应
+	* 姓名 -- name
+	* 标识 -- mauth, name 与 mauth对应
 #### 返回字段
-  * 错误标记 -- error
-  * 信息 -- msg
-  * 数据 -- data，数组
-    * 昵称 -- nick
-    * 学位 -- degree
-    * 用户名 -- name
+	* 错误标记 -- error
+	* 信息 -- msg
+	* 数据 -- data，数组
+	* 昵称 -- nick
+	* 学位 -- degree
+	* 用户名 -- name
 #### 样例
     {
         "error": 0,
