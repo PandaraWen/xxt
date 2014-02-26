@@ -13,7 +13,7 @@ xxt
   * [登陆接口](#登陆接口)
 * 下行接口
   * [好友列表接口](#好友列表接口)
-
+  * [动态列表接口](#动态列表接口)
 接口说明
 --------
 <h1>上行接口</h1>
@@ -109,6 +109,58 @@ xxt
     }
 [↑返回顶部](#xxt)
 
+<h2>动态列表接口</h2>
+域名:http://xxtforios.duapp.com/?op=feedlist&mauth=69206c6971528ae2e0c32ddeb21653df&name=one&perpage=10&page=1
+#### 请求参数
+	* 姓名 -- name
+	* 标识 -- mauth, name 与 mauth对应
+	* 每页 -- perpage, 默认10
+	* 页码 -- page, 默认0
+#### 返回字段
+	* 错误标记 -- error
+	* 信息 -- msg
+	* 数据 -- data，数组
+		* 昵称 -- nick
+		* 用户名 -- name
+		* 热度 -- heat
+		* 发布时间 -- dateline
+		* 内容 -- content
+#### 样例
+{
+    "error": 0,
+    "msg": "access successfully",
+    "data": [
+        {
+            "content": "百度已经完全落后了么",
+            "name": "one",
+            "heat": "0",
+            "dateline": "1393395437",
+            "nick": "一"
+        },
+        {
+            "content": "百度已经完全落后了么",
+            "name": "one",
+            "heat": "0",
+            "dateline": "1393395406",
+            "nick": "一"
+        },
+        {
+            "content": "百度已经完全落后了么",
+            "name": "one",
+            "heat": "0",
+            "dateline": "1393394680",
+            "nick": "一"
+        },
+        {
+            "content": "腾讯与阿里巴巴的世界大战",
+            "name": "pandara",
+            "heat": "0",
+            "dateline": "1393387170",
+            "nick": "烧饼"
+        }
+    ]
+}
+[↑返回顶部](#xxt)
 
 
 
