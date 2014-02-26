@@ -40,11 +40,11 @@ xxt
 #### 返回字段
 	* 错误标记 -- error
 	* 信息 -- msg
-  * 数据 -- data，字典
-        * 标识 -- mauth
-        * 昵称 -- nick
-        * 学位 -- degree
-        * 用户名 -- name
+        * 数据 -- data，字典
+          * 标识 -- mauth
+          * 昵称 -- nick
+          * 学位 -- degree
+          * 用户名 -- name
 #### 样例
     { 
       error: 0,
@@ -55,6 +55,23 @@ xxt
         degree: "学士",
         name: "one"
       }
+    }
+[↑返回顶部](#xxt)
+
+<h2>发表动态接口</h2>
+域名:http://xxtforios.duapp.com/?op=postfeed&mauth=69206c6971528ae2e0c32ddeb21653df&name=one&content=百度已经完全落后了么&option=1
+#### 请求参数
+  * 姓名 -- name
+  * 标识 -- mauth
+  * 动态内容 -- content
+  * 可见性设置 -- option，0:全局，1:盆友，2:自己，不设置默认为0
+#### 返回字段
+  * 错误标记 -- error
+  * 信息 -- msg
+#### 样例
+    {
+        "error": 0,
+        "msg": "access successfully"
     }
 [↑返回顶部](#xxt)
 
