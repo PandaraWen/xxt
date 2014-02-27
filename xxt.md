@@ -176,6 +176,7 @@ xxt
 		* 提醒日期 -- alarmdateline
 		* 重复设置 -- option
 		* 提醒内容 -- content
+		* 创建日期 -- createdateline
 #### 样例
 	{
 	    "error": 0,
@@ -183,6 +184,7 @@ xxt
 	    "data": [
 	        {
 	            "alarmdateline": "1410484438",
+		    "createdateline": "1356784920",
 	            "option": "0",
 	            "content": "起床鸟"
 	        }
