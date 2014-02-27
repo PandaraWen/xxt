@@ -14,6 +14,7 @@ xxt
 * 下行接口
   * [好友列表接口](#好友列表接口)
   * [动态列表接口](#动态列表接口)
+  * [日历列表接口](#日历列表接口)
  
 接口说明
 --------
@@ -88,9 +89,9 @@ xxt
 	* 错误标记 -- error
 	* 信息 -- msg
 	* 数据 -- data，数组
-	* 昵称 -- nick
-	* 学位 -- degree
-	* 用户名 -- name
+		* 昵称 -- nick
+		* 学位 -- degree
+		* 用户名 -- name
 #### 样例
     {
         "error": 0,
@@ -163,7 +164,31 @@ xxt
 	}
 [↑返回顶部](#xxt)
 
-
+<h2>日历列表接口</h2>
+域名:http://xxtforios.duapp.com/?op=calendarlist&mauth=69206c6971528ae2e0c32ddeb21653df&name=one
+#### 请求参数
+	* 姓名 -- name
+	* 标识 -- mauth, name 与 mauth对应
+#### 返回字段
+	* 错误标记 -- error
+	* 信息 -- msg
+	* 数据 -- data，数组
+		* 提醒日期 -- alarmdateline
+		* 重复设置 -- option
+		* 提醒内容 -- content
+#### 样例
+	{
+	    "error": 0,
+	    "msg": "access successfully",
+	    "data": [
+	        {
+	            "alarmdateline": "1410484438",
+	            "option": "0",
+	            "content": "起床鸟"
+	        }
+	    ]
+	}
+[↑返回顶部](#xxt)
 
 
 
