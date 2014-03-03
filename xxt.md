@@ -83,7 +83,8 @@ xxt
 [↑返回顶部](#xxt)
 
 <h2>发送反馈接口</h2>
-域名:http://xxtforphp.sinaapp.com/?op=postfeedback&mauth=bcf51899f50473a60454972e13c6158c&name=pandara&content=做得非常棒#### 请求参数
+域名:http://xxtforphp.sinaapp.com/?op=postfeedback&mauth=bcf51899f50473a60454972e13c6158c&name=pandara&content=做得非常棒
+#### 请求参数
 	* 姓名 -- name
 	* 标识 -- mauth
 	* 反馈内容 -- content
