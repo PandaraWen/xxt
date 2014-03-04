@@ -18,6 +18,7 @@ xxt
   * [好友列表接口](#好友列表接口)
   * [动态列表接口](#动态列表接口)
   * [日历列表接口](#日历列表接口)
+  * [对话列表接口](#对话列表接口)
  
 接口说明
 --------
@@ -236,5 +237,57 @@ xxt
 	}
 [↑返回顶部](#xxt)
 
+<h2>对话列表接口</h2>
+域名:http://xxtforphp.sinaapp.com/?op=chatlist&mauth=bcf51899f50473a60454972e13c6158c&name=pandara&toname=one
+#### 请求参数
+	* 姓名 -- name
+	* 标识 -- mauth, name 与 mauth对应
+	* 对话对象 -- toname
+#### 返回字段
+	* 错误标记 -- error
+	* 信息 -- msg
+	* 数据 -- data，字典
+		* 发送方用户信息 -- fromuser 
+		* 接收方用户信息 -- touser
+		* 对话内容列表 -- chatlist
+			* 对话的id -- id
+			* 发送方的名字 -- fromname
+			* 接收方的名字 -- toname
+			* 对话内容 -- content
+			* 发送日期 -- dateline
+#### 样例
+	{
+		error: 0
+		msg: "access successfully"
+		-data: {
+			-fromuser: {
+				name: "pandara"
+				nick: "烧饼"
+				degree: "博士"
+			}
+			-touser: {
+				name: "one"
+				nick: "一"
+				degree: "学士"
+			}
+			-chatlist: [
+				-{
+					id: "16"
+					fromname: "pandara"
+					toname: "one"
+					content: "来聊聊天吧~012"
+					dateline: "1393915635"
+				}
+				-{
+					id: "15"
+					fromname: "pandara"
+					toname: "one"
+					content: "来聊聊天吧~010"
+					dateline: "1393915404"
+				}
+			]
+		}
+	}
+[↑返回顶部](#xxt)
 
 
