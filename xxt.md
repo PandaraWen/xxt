@@ -13,6 +13,7 @@ xxt
   * [登陆接口](#登陆接口)
   * [发布动态接口](#发布动态接口)
   * [发送反馈接口](#发送反馈接口)
+  * [发送对话接口](#发送对话接口)
 * 下行接口
   * [好友列表接口](#好友列表接口)
   * [动态列表接口](#动态列表接口)
@@ -88,6 +89,24 @@ xxt
 	* 姓名 -- name
 	* 标识 -- mauth
 	* 反馈内容 -- content
+#### 返回字段
+  	* 错误标记 -- error
+  	* 信息 -- msg
+#### 样例
+    {
+        "error": 0,
+        "msg": "access successfully"
+    }
+[↑返回顶部](#xxt)
+
+<h2>发送对话接口</h2>
+域名:http://xxtforphp.sinaapp.com/?op=postchat&mauth=bcf51899f50473a60454972e13c6158c&name=pandara&content=来聊聊天吧~&toname=one
+
+#### 请求参数
+	* 姓名 -- name
+	* 标识 -- mauth
+	* 发送对象 -- toname
+	* 对话内容 -- content
 #### 返回字段
   	* 错误标记 -- error
   	* 信息 -- msg
