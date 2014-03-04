@@ -18,8 +18,8 @@ xxt
   * [好友列表接口](#好友列表接口)
   * [动态列表接口](#动态列表接口)
   * [日历列表接口](#日历列表接口)
+  * [对话详情接口](#对话详情接口)
   * [对话列表接口](#对话列表接口)
- 
 接口说明
 --------
 <h1>上行接口</h1>
@@ -237,12 +237,14 @@ xxt
 	}
 [↑返回顶部](#xxt)
 
-<h2>对话列表接口</h2>
+<h2>对话详情接口</h2>
 域名:http://xxtforphp.sinaapp.com/?op=chatlist&mauth=bcf51899f50473a60454972e13c6158c&name=pandara&toname=one
 #### 请求参数
 	* 姓名 -- name
 	* 标识 -- mauth, name 与 mauth对应
 	* 对话对象 -- toname
+	* 页码 -- page, 默认0
+	* 每页条数 -- perpage, 默认10
 #### 返回字段
 	* 错误标记 -- error
 	* 信息 -- msg
@@ -290,4 +292,39 @@ xxt
 	}
 [↑返回顶部](#xxt)
 
+<h2>对话列表接口</h2>
+域名:http://xxtforphp.sinaapp.com/?op=allchatlist&mauth=bcf51899f50473a60454972e13c6158c&name=pandara&page=0&perpage=1
+#### 请求参数
+	* 姓名 -- name
+	* 标识 -- mauth, name 与 mauth对应
+	* 页码 -- page, 默认0
+	* 每页 -- perpage, 默认10
+#### 返回字段
+	* 错误标记 -- error
+	* 信息 -- msg
+	* 数据 -- data，数组
+		* 发送方用户名 -- fromname
+		* 接收方用户名 -- toname
+		* 最新一条对话内容 -- content
+		* 最新一条对话时间 -- dateline
+		* 对方的用户信息 -- touserinfo
+#### 样例
+	{
+		error: 0
+		msg: "access successfully"
+		-data: [
+			-{
+				fromname: "pandara"
+				toname: "three"
+				content: "来聊聊天吧~005"
+				dateline: "1393925106"
+				-touserinfo: {
+					name: "three"
+					nick: "三"
+					degree: "学士"
+				}
+			}
+		]
+	}
+[↑返回顶部](#xxt)
 
