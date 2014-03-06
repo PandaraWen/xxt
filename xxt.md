@@ -53,17 +53,19 @@ xxt
           * 昵称 -- nick
           * 学位 -- degree
           * 用户名 -- name
+          * 头像url -- avatarurl
 #### 样例
-    { 
-      error: 0,
-      msg: "login success",
-      data: {
-        mauth: "69206c6971528ae2e0c32ddeb21653df",
-        nick: "一",
-        degree: "学士",
-        name: "one"
-      }
-    }
+    	{
+		error: 0
+		msg: "login success"
+		-data: {
+			mauth: "bcf51899f50473a60454972e13c6158c"
+			nick: "烧饼"
+			degree: "博士"
+			name: "pandara"
+			avatarurl: http://xxtforphp-image.stor.sinaapp.com/avatar/pandara.jpeg
+		}
+	}
 [↑返回顶部](#xxt)
 
 <h2>发表动态接口</h2>
