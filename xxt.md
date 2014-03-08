@@ -20,6 +20,7 @@ xxt
   * [日历列表接口](#日历列表接口)
   * [对话详情接口](#对话详情接口)
   * [对话列表接口](#对话列表接口)
+  * [个人详细信息接口](#个人详细信息接口)
 
 接口说明
 --------
@@ -30,14 +31,23 @@ xxt
 #### 请求参数
 	* 姓名 -- name
 	* 密码 -- passwd
+	* 昵称 -- nick 可选
 #### 返回字段
 	* 错误标记 -- error
 	* 信息 -- msg
+	* 个人信息 -- data
 #### 样例
-    {
-      error: 0,
-      msg: "access successfully",
-    }
+	{
+		error: 0
+		msg: "access successfully"
+		-data: {
+			mauth: "b3bc6de7072711e6e50083a0d564bb89"
+			nick: "十二宫"
+			degree: ""
+			name: "twelve"
+			avatarurl: ""
+		}
+	}
 [↑返回顶部](#xxt)
 
 <h2>登陆接口</h2>
@@ -328,6 +338,35 @@ xxt
 				}
 			}
 		]
+	}
+[↑返回顶部](#xxt)
+
+<h2>个人详细信息接口</h2>
+域名:http://xxtforphp.sinaapp.com/?op=detailinfo&mauth=bcf51899f50473a60454972e13c6158c&name=pandara
+#### 请求参数
+	* 姓名 -- name
+	* 标识 -- mauth, name 与 mauth对应
+	* 目标的用户名 -- name
+#### 返回字段
+	* 错误标记 -- error
+	* 信息 -- msg
+	* 数据 -- data，字典
+		
+#### 样例
+	{
+		error: 0
+		msg: "access successfully"
+		-data: {
+			nick: "李敏镐"
+			name: "one"
+			degree: "学士"
+			avatarurl: http://xxtforphp-image.stor.sinaapp.com/avatar/one.jpeg
+			introduce: " 李敏镐是一个能使周围的气氛活跃起来的人。"
+			discourse: "▪2013 日本韩流十周年大赏男演员部门第八名 李敏镐 （获奖）"
+			program: "《继承者们》、韩版《城市猎人》、韩版《花样男子》、《信义》"
+			school: "建国大学电影艺术学院"
+			email: "ultraman_wen@sina.com"
+		}
 	}
 [↑返回顶部](#xxt)
 
